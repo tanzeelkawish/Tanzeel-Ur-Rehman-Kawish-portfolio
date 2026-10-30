@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of Tanzeel Ur Rehman Kawish, Doctor of Pharmacy.">
+<title>Tanzeel Ur Rehman Kawish | Pharmacist</title>
+
+<style>
+:root {
+  --navy: #102b46;
+  --blue: #176b87;
+  --teal: #28a6a1;
+  --light: #f2f7f8;
+  --text: #25384a;
+  --muted: #68798a;
+  --border: #e2e9eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: #fff;
+}
+
+.container {
+  width: 88%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: rgba(255,255,255,.96);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  min-height: 72px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 23px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(40,166,161,.13), transparent 30%),
+    linear-gradient(120deg, #f0f7f8, white);
+  padding: 105px 0 95px;
+}
+
+.hero-content {
+  max-width: 1000px;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  color: var(--navy);
+  font-size: clamp(36px, 5vw, 65px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin: 18px 0;
+}
+
+.hero h2 {
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.expertise-heading {
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.expertise {
+  color: #526477;
+  font-size: 17px;
+  line-height: 2;
+  max-width: 920px;
+}
+
+.hero-divider {
+  width: 65px;
+  height: 3px;
+  background: var(--teal);
+  margin: 25px 0 15px;
+}
+
+.location {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 13px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.primary {
+  background: var(--navy);
+  color: white;
+}
+
+.primary:hover { background: var(--blue); }
+
+.secondary {
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  background: white;
+}
+
+/* GENERAL SECTIONS */
+
+section { padding: 85px 0; }
+
+.light-section { background: var(--light); }
+
+.section-title { margin-bottom: 35px; }
+
+.section-title h2 {
+  color: var(--navy);
+  font-size: 35px;
+  margin: 5px 0;
+}
+
+.section-title p { color: var(--muted); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 45px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.info {
+  padding: 17px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.info strong {
+  display: block;
+  color: var(--navy);
+}
+
+.info span { color: var(--muted); }
+.info a { color: var(--blue); }
+
+/* EXPERIENCE */
+
+.timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(16,43,70,.035);
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 19px;
+}
+
+.organization {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.date {
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 5px 0 12px;
+}
+
+.card ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.card li { margin-bottom: 5px; }
+
+/* EDUCATION AND OTHER GRIDS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.box {
+  background: white;
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.box h3 {
+  color: var(--navy);
+  margin-bottom: 7px;
+}
+
+.box p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* RESEARCH */
+
+.research {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--teal);
+  padding: 28px;
+  border-radius: 9px;
+}
+
+.research h3 {
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.research p { color: var(--muted); }
+
+.status {
+  display: inline-block;
+  background: #e5f6f3;
+  color: #14756f;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* LANGUAGES */
+
+.language-box {
+  background: white;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.language-box h3 { color: var(--navy); }
+.language-box p { color: var(--muted); }
+
+/* CONTACT */
+
+.contact {
+  background: var(--navy);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.contact h2 { font-size: 30px; }
+
+.contact p {
+  color: #c4d4df;
+  margin: 10px 0 20px;
+}
+
+.contact a {
+  display: inline-block;
+  color: white;
+  margin: 5px 18px 5px 0;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .about-grid { grid-template-columns: 1fr; }
+
+  .nav-links {
+    gap: 13px;
+    justify-content: center;
+  }
+
+  nav { padding: 15px 0; }
+}
+
+@media(max-width: 600px) {
+  .container { width: 92%; }
+
+  .grid { grid-template-columns: 1fr; }
+
+  .hero { padding: 70px 0; }
+
+  section { padding: 60px 0; }
+
+  .hero h1 {
+    font-size: 37px;
+    letter-spacing: -1px;
+  }
+
+  .hero h2 { font-size: 19px; }
+
+  .expertise { font-size: 15px; }
+
+  .section-title h2 { font-size: 29px; }
+}
+
+@media print {
+  header, .buttons, footer { display: none; }
+
+  section, .hero {
+    padding: 25px 0;
+    background: white;
+  }
+
+  .card, .box, .research {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="container">
+<ul class="nav-links">
+  <li><a href="#about">About</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#education">Education</a></li>
+  <li><a href="#research">Research</a></li>
+  <li><a href="#certifications">Certifications</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+  <div class="eyebrow">Professional Portfolio</div>
+
+  <h1>TANZEEL UR REHMAN KAWISH</h1>
+
+  <h2>Pharmacist | Doctor of Pharmacy (Pharm-D)</h2>
+
+  <div class="expertise-heading">AREAS OF EXPERTISE</div>
+
+  <p class="expertise">
+    Clinical Practice |
+    Clinical Researcher |
+    Medical Data Expert (EMR/EHR) |
+    Digital Health &amp; Telehealth |
+    AI Innovation in Medical Practice |
+    Hospital, Community &amp; Industrial Pharmacy Practice
+  </p>
+
+  <div class="hero-divider"></div>
+
+  <p class="location">Sahiwal, Punjab, Pakistan</p>
+
+  <div class="buttons">
+    <a href="#experience" class="btn primary">
+      Explore My Experience
+    </a>
+
+    <a href="#contact" class="btn secondary">
+      Contact Me
+    </a>
+
+    <button class="btn secondary" onclick="window.print()">
+      Save as PDF
+    </button>
+  </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container">
+
+<div class="section-title">
+  <div class="eyebrow">Introduction</div>
+  <h2>About Me</h2>
+</div>
+
+<div class="about-grid">
+
+
+<div class="about-text">
+
+<p>
+I am a Pharmacist (Doctor of Pharmacy) with diverse practical experience across hospital, community, and industrial pharmacy settings. My professional expertise includes clinical pharmacy practice, medication dispensing, prescription review, patient counselling, inventory management, pharmaceutical production, and Good Manufacturing Practice (GMP) compliance.
+</p>
+
+<p>
+Beyond traditional pharmacy practice, I have developed a keen interest in clinical research, medical documentation, and healthcare data management, including Electronic Medical or Health Records (EMR/EHR). My involvement in medical data annotation, AI-based medical applications, and the evaluation of healthcare documentation demonstrates my commitment to exploring the evolving role of artificial intelligence and digital health in transforming modern medical practice.
+</p>
+
+<p>
+My broader professional interests include clinical practice, clinical research, medical data expertise, digital health and telehealth, and the responsible integration of AI innovation into healthcare. My objective is to contribute to healthcare organisations by combining pharmaceutical knowledge, practical experience, research capabilities, and emerging digital health skills to promote medication safety, quality assurance, efficient healthcare services, and continuous professional development.
+</p>
+
+</div>
+
+
+<div>
+<div class="info">
+<strong>Email</strong>
+<span><a href="mailto:kawish677@gmail.com">
+kawish677@gmail.com</a></span>
+</div>
+
+<div class="info">
+<strong>Phone</strong>
+<span><a href="tel:+923021968344">+92 302 1968344</a></span>
+</div>
+
+<div class="info">
+<strong>Location</strong>
+<span>Sahiwal, Punjab, Pakistan</span>
+</div>
+
+<div class="info">
+<strong>LinkedIn</strong>
+<span>
+<a href="https://www.linkedin.com/in/tanzeel-ur-rehman-kawish/"
+target="_blank" rel="noopener">Professional Profile</a>
+</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience" class="light-section">
+<div class="container">
+
+<div class="section-title">
+  <div class="eyebrow">Career Journey</div>
+  <h2>Professional Experience</h2>
+  <p>Experience across pharmacy, production, healthcare and medical AI.</p>
+</div>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Production In-Charge Pharmacist</h3>
+<div class="organization">AB Pharma (Veterinary) | Sahiwal</div>
+<div class="date">10 August 2026 – Present</div>
+<ul>
+<li>Managing production of veterinary liquid formulations and supervising manufacturing operations.</li>
+<li>Ensuring GMP compliance, batch documentation and product quality standards.</li>
+<li>Leading production teams and coordinating with QA/QC departments to achieve production targets.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Medical Data Trainer / Qualified Pharmacist</h3>
+<div class="organization">SME Careers | Remote, Task-Based</div>
+<div class="date">3 July 2026 – Present</div>
+<ul>
+<li>Medical record documentation management.</li>
+<li>Exploring artificial intelligence applications in healthcare.</li>
+<li>Adapting to remote and task-based working environments.</li>
+</ul>
+<p class="date">Qualified as Pharmacist: 28 October 2026</p>
+</div>
+
+<div class="card">
+<h3>Life Science &amp; AI Medical Expert Freelancer</h3>
+<div class="organization">TELUS AI Digital | Remote</div>
+<div class="date">Part-Time</div>
+<ul>
+<li>Working with artificial intelligence applications in medical and life-science contexts.</li>
+<li>Performing AI data annotation tasks.</li>
+<li>Reviewing and evaluating medical documentation for AI-related workflows.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Pharmacist (Evening)</h3>
+<div class="organization">Al-Khidmat Hospital | Sahiwal</div>
+<div class="date">1 January – 31 March 2026</div>
+<ul>
+<li>Dispensed medications to OPD, IPD and emergency patients.</li>
+<li>Assisted with prescription review and patient counselling.</li>
+<li>Managed inventory, stock levels, pharmacy records and registers.</li>
+<li>Operated pharmacy software for billing and documentation.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Intern Pharmacist (Voluntary)</h3>
+<div class="organization">Sahiwal Teaching Hospital (DHQ)</div>
+<div class="date">January – March 2026</div>
+<ul>
+<li>Assisted with dispensing and prescription processing in OPD, Emergency and Surgical Ward pharmacies.</li>
+<li>Collaborated with healthcare professionals to support patient care.</li>
+<li>Monitored inventory and timely replenishment across departments.</li>
+<li>Participated in Local Purchase (LPDD) and Bulk Procurement (LPQ) activities.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Pharmacy Assistant</h3>
+<div class="organization">Healthcare Plus Pharmacy | Sahiwal</div>
+<div class="date">January 2021 – December 2025</div>
+<ul>
+<li>Dispensed prescription and over-the-counter medicines.</li>
+<li>Provided patient guidance on dosage, side effects and adherence.</li>
+<li>Monitored stock, expiry dates and proper medicine storage.</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Academic Background</div>
+<h2>Education</h2>
+</div>
+
+<div class="grid">
+
+<div class="box">
+<h3>Doctor of Pharmacy (Pharm-D)</h3>
+<p>Quaid-e-Azam College of Pharmacy, Sahiwal</p>
+<p>Affiliated with University of Health Sciences, Lahore</p>
+<p>2020–2025</p>
+</div>
+
+<div class="box">
+<h3>F.Sc. / Intermediate (Pre-Medical)</h3>
+<p>Divisional Public School Inter College, Sahiwal</p>
+<p>2018–2020</p>
+</div>
+
+<div class="box">
+<h3>Matriculation</h3>
+<p>Divisional Public School, Sahiwal</p>
+<p>2016–2018</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- RESEARCH -->
+
+<section id="research" class="light-section">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Academic Contribution</div>
+<h2>Research &amp; Publications</h2>
+</div>
+
+<div class="research">
+
+<h3>
+Assessment of Insulin Therapy Adherence Among Patients
+with Type 2 Diabetes Mellitus: A Hospital-Based
+Cross-Sectional Study
+</h3>
+
+<span class="status">Manuscript Under Review</span>
+
+<p><strong>Role:</strong> Co-author</p>
+<p><strong>Journal:</strong> Drugs &amp; Therapy Perspectives,
+Springer Nature</p>
+
+<br>
+
+<p>
+Conducted a hospital-based research study at DHQ Hospital
+Pakpattan evaluating insulin therapy adherence among
+patients with Type 2 Diabetes Mellitus.
+</p>
+
+<p>
+Utilised structured patient interviews and questionnaires
+for data collection, identifying barriers to adherence
+and developing practical recommendations for improving
+diabetes management and patient education.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Professional Development</div>
+<h2>Certifications &amp; Conferences</h2>
+</div>
+
+<div class="grid">
+
+<div class="box">
+<h3>1st International Clinical Pharmacy Conference (ICPC)</h3>
+<p>2025</p>
+<p>University of Health Sciences, Lahore</p>
+</div>
+
+<div class="box">
+<h3>Choosing the Right IV Fluid &amp; Electrolytes Replacements</h3>
+<p>2024 | Continuing Education Session</p>
+<p>Department of Pharmacy Services, Shifa International Hospital</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="light-section">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Professional Competencies</div>
+<h2>Skills &amp; Expertise</h2>
+</div>
+
+<div class="grid">
+
+<div class="box">
+<h3>Clinical &amp; Pharmacy Expertise</h3>
+<p>Dispensing, prescription review, patient care and counselling, emergency and surgical care.</p>
+</div>
+
+<div class="box">
+<h3>Production &amp; Quality</h3>
+<p>Manufacturing operations, GMP compliance, batch documentation and QA/QC coordination.</p>
+</div>
+
+<div class="box">
+<h3>Inventory &amp; Data Management</h3>
+<p>Stock control, pharmacy records, EMR and medical data management.</p>
+</div>
+
+<div class="box">
+<h3>Medical AI</h3>
+<p>AI data annotation, medical documentation and AI evaluation.</p>
+</div>
+
+<div class="box">
+<h3>Research &amp; Documentation</h3>
+<p>Data collection, analysis, reporting and research documentation.</p>
+</div>
+
+<div class="box">
+<h3>Computer Skills</h3>
+<p>MS Word, Excel, PowerPoint, clinical software, databases and online tools.</p>
+</div>
+
+<div class="box">
+<h3>Multimedia &amp; Design</h3>
+<p>Photo editing, video editing and graphic design.</p>
+</div>
+
+<div class="box">
+<h3>Business &amp; Management</h3>
+<p>Purchasing, budgeting, workflow optimisation, teamwork and professional communication.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- LANGUAGES -->
+
+<section id="languages">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Communication</div>
+<h2>Languages</h2>
+</div>
+
+<div class="grid">
+
+<div class="language-box">
+<h3>Urdu</h3>
+<p>Native Proficiency</p>
+</div>
+
+<div class="language-box">
+<h3>English</h3>
+<p>Fluent – Professional Working Proficiency</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="light-section">
+<div class="container">
+
+<div class="contact">
+<h2>Let's Connect</h2>
+
+<p>
+Open to professional opportunities,
+collaborations and research discussions.
+</p>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=kawish677@gmail.com"
+target="_blank" rel="noopener">Email Me</a>
+
+<a href="tel:+923021968344">Call Me</a>
+
+<a href="https://www.linkedin.com/in/tanzeel-ur-rehman-kawish/"
+target="_blank" rel="noopener">LinkedIn</a>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© <span id="year"></span> Tanzeel Ur Rehman Kawish.
+All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
